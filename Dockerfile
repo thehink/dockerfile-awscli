@@ -17,4 +17,4 @@ RUN \
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 # install latest npm
-RUN npm install -g npm@latest
+RUN sudo npm install -g npm@latest
