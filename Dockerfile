@@ -1,4 +1,4 @@
-FROM circleci/node:6.12.3
+FROM circleci/node:6.13.1
 
 RUN sudo apt-get update
 RUN sudo apt-get install python-pip python-dev jq
@@ -17,4 +17,4 @@ RUN \
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 # install latest npm
-RUN sudo npm install -g npm@latest
+# RUN sudo npm install -g npm@latest
