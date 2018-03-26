@@ -15,3 +15,6 @@ RUN \
   sudo rm -rf /var/cache/oracle-jdk8-installer
   
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
+
+# install latest npm
+RUN npm install -g npm@latest
