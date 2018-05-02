@@ -16,6 +16,7 @@ RUN \
   
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
+RUN sudo add-apt-repository ppa:ondrej/php
 RUN sudo apt-get install curl php5-cli git
 RUN php -r "copy('https://getcomposer.org/installer', '/tmp/composer-setup.php');" & \
     sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
