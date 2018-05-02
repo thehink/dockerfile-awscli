@@ -16,9 +16,9 @@ RUN \
   
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
-RUN sudo apt-get install -y --no-install-recommends git zip php
-
-RUN curl --silent --show-error https://getcomposer.org/installer | php
+RUN sudo apt-get install curl php5-cli git
+RUN php -r "copy('https://getcomposer.org/installer', '/tmp/composer-setup.php');" & \
+    sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 # install latest npm
 # RUN sudo npm install -g npm@latest
