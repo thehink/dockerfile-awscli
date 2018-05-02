@@ -16,5 +16,9 @@ RUN \
   
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
+RUN apt-get install -y --no-install-recommends git zip php
+
+RUN curl --silent --show-error https://getcomposer.org/installer | php
+
 # install latest npm
 # RUN sudo npm install -g npm@latest
