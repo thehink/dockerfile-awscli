@@ -22,7 +22,8 @@ RUN sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/ap
     sudo add-apt-repository "deb https://packages.sury.org/php/ $(lsb_release -sc) main" && \
     sudo apt-get update
 
-RUN sudo apt-get install php7.1
+RUN sudo apt-get install php7.1 && \
+    sudo apt-get install php7.1-mbstring
 
 RUN php -r "copy('https://getcomposer.org/installer', '/tmp/composer-setup.php');" && \
     sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
