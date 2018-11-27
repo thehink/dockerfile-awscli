@@ -1,4 +1,4 @@
-FROM circleci/node:8.11.3
+FROM circleci/node:8.13.0
 
 RUN sudo apt-get update
 RUN sudo apt-get install python-pip python-dev jq
