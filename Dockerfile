@@ -1,4 +1,4 @@
-FROM circleci/node:8.13.0
+FROM circleci/node:8-stretch-browsers
 
 RUN sudo apt-get update
 RUN sudo apt-get install python-pip python-dev jq
